@@ -1,0 +1,126 @@
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.match-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.live-match {
+    border: 2px solid #e74c3c;
+}
+
+.match-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.live-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #e74c3c;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.match-teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.team {
+    flex: 1;
+    text-align: center;
+}
+
+.team h4 {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.vs {
+    font-weight: 700;
+    color: #95a5a6;
+    padding: 0 15px;
+}
+
+.match-info {
+    border-top: 1px solid #ecf0f1;
+    padding-top: 15px;
+}
+
+.match-info p {
+    margin-bottom: 8px;
+    color: #7f8c8d;
+    font-size: 0.95rem;
+}
+
+.match-info i {
+    margin-right: 8px;
+    color: #3498db;
+}
+
+.match-result {
+    margin-top: 15px;
+    padding: 10px;
+    background: #ecf0f1;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    color: #27ae60;
+}

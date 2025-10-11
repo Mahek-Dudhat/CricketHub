@@ -1,0 +1,59 @@
+.teams-container{
+    margin-top: 7rem;
+    padding: 3.5rem;
+}
+
+.rankings-table {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rankings-table thead {
+    background: #2c3e50;
+    color: white;
+}
+
+.rankings-table th {
+    font-weight: 600;
+    padding: 15px;
+}
+
+.rankings-table td {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.rankings-table tbody tr {
+    transition: background 0.2s;
+}
+
+.rankings-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.rank-cell {
+    width: 80px;
+}
+
+.rank-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.team-cell {
+    font-size: 1.1rem;
+}
+
+.team-flag {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
