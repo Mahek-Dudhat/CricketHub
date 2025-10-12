@@ -2,9 +2,6 @@
 
 A full-stack web application for managing and viewing cricket information including live matches, team rankings, player statistics, and comprehensive admin management system.
 
-<!-- ![Cricket Info](https://img.shields.io/badge/Status-Active-success) -->
-
-<!-- ![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen) -->
 c:\Users\mahek\OneDrive\Pictures\Screenshots\Screenshot 2025-10-11 143905.png
 
 ## 🎯 Overview
