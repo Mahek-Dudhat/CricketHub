@@ -109,7 +109,8 @@ function AdminPanel() {
             [e.target.name]: e.target.value
         });
     };
-
+   
+    console.log(import.meta.env.VITE_API_URL);
     return (
         <div className="admin-panel">
            
