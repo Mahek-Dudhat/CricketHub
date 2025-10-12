@@ -5,6 +5,13 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 
+
+
+// Load environment variables
+dotenv.config();
+
+const app = express();
+
 // Update CORS configuration
 const corsOptions = {
     origin: [
@@ -15,11 +22,6 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-
-// Load environment variables
-dotenv.config();
-
-const app = express();
 console.log("MongoDB URI:", process.env.MONGODB_URL);
 
 // Middleware
