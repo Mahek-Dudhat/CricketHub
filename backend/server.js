@@ -5,6 +5,17 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 
+// Update CORS configuration
+const corsOptions = {
+    origin: [
+        'http://localhost:3000',
+        'https://cricket-frontend-93ct.onrender.com'  // Add your Render frontend URL
+    ],
+    credentials: true
+};
+
+app.use(cors(corsOptions));
+
 // Load environment variables
 dotenv.config();
 
