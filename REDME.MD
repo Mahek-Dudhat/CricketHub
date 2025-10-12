@@ -332,8 +332,8 @@ cricket-info-website/
 
 ## 👨‍💻 Author
 
-- GitHub: [@yourusername](https://github.com/Mahek-Dudhat)
-- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/mahek-dudhat-712b3431a/)
+- GitHub: [My github](https://github.com/Mahek-Dudhat)
+- LinkedIn: [My LinkedIn](https://www.linkedin.com/in/mahek-dudhat-712b3431a/)
 
 ⭐ **Star this repository if you found it helpful!**
 
