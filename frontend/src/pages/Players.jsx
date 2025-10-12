@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Players.css';
 import Footer from '../components/Footer';
+import API_URL from '../config';
 
 function Players() {
     const [players, setPlayers] = useState([]);
@@ -14,7 +15,7 @@ function Players() {
 
     const fetchPlayers = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/players');
+            const response = await axios.get(`${API_URL}/api/players`);
             setPlayers(response.data);
             setLoading(false);
         } catch (error) {

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Teams.css';
 import Footer from '../components/Footer';
+import API_URL from '../config';
 
 function Teams() {
     const [teams, setTeams] = useState([]);
@@ -13,7 +14,7 @@ function Teams() {
 
     const fetchTeams = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/teams');
+            const response = await axios.get(`${API_URL}/api/teams`);
             setTeams(response.data);
             setLoading(false);
         } catch (error) {

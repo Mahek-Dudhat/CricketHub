@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_URL from '../config';
 import './AdminPanel.css';
 
 function AdminPanel() {
@@ -24,13 +25,13 @@ function AdminPanel() {
 
         try {
             if (activeTab === 'players') {
-                const res = await axios.get('http://localhost:5000/api/players', config);
+                const res = await axios.get(`${API_URL}/api/players`, config);
                 setPlayers(res.data);
             } else if (activeTab === 'teams') {
-                const res = await axios.get('http://localhost:5000/api/teams', config);
+                const res = await axios.get(`${API_URL}/api/teams`, config);
                 setTeams(res.data);
             } else if (activeTab === 'matches') {
-                const res = await axios.get('http://localhost:5000/api/matches', config);
+                const res = await axios.get(`${API_URL}/api/matches`, config);
                 setMatches(res.data);
             }
         } catch (error) {
@@ -59,7 +60,7 @@ function AdminPanel() {
         };
 
         try {
-            await axios.delete(`http://localhost:5000/api/${activeTab}/${id}`, config);
+            await axios.delete(`${API_URL}/api/${activeTab}/${id}`, config);
             fetchData();
             setMsg("Deleted Successfully");
             setTimeout(() => setMsg(""), 3000);
@@ -79,7 +80,7 @@ function AdminPanel() {
         try {
             if (editingItem) {
                 await axios.put(
-                    `http://localhost:5000/api/${activeTab}/${editingItem._id}`,
+                    `${API_URL}/api/${activeTab}/${editingItem._id}`,
                     formData,
                     config
                 );
@@ -87,7 +88,7 @@ function AdminPanel() {
                 setTimeout(() => setMsg(""), 3000);
             } else {
                 await axios.post(
-                    `http://localhost:5000/api/${activeTab}`,
+                    `${API_URL}/api/${activeTab}`,
                     formData,
                     config
                 );
