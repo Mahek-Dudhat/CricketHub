@@ -129,9 +129,9 @@ PORT=5000
 NODE_ENV=development
 
 # MongoDB Configuration
-MONGODB_URL=mongodb://localhost:27017/cricketdb
+MONGODB_URL=mongodb://localhost:27017/db_name
 # For production use MongoDB Atlas:
-# MONGODB_URL=mongodb+srv://username:password@cluster.mongodb.net/
+# MONGODB_URL=mongodb+srv://username:password@cluster.mongodb.net/db_name
 
 # JWT Secret
 JWT_SECRET=your_super_secret_jwt_key_change_this_in_production
