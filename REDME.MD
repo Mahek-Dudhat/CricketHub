@@ -331,8 +331,7 @@ cricket-info-website/
 - [ ] Responsive design works
 
 ## 👨‍💻 Author
-
-- GitHub: [My github](https://github.com/Mahek-Dudhat)
+Created by:- Mahek Dudhat
 - LinkedIn: [My LinkedIn](https://www.linkedin.com/in/mahek-dudhat-712b3431a/)
 
 ⭐ **Star this repository if you found it helpful!**
