@@ -55,6 +55,7 @@ function AdminPanel() {
         if (!window.confirm('Are you sure you want to delete this item?')) return;
 
         const token = localStorage.getItem('token');
+
         const config = {
             headers: { Authorization: `Bearer ${token}` }
         };
@@ -73,6 +74,7 @@ function AdminPanel() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const token = localStorage.getItem('token');
+        console.log("Token:", token);
         const config = {
             headers: { Authorization: `Bearer ${token}` }
         };
@@ -109,11 +111,12 @@ function AdminPanel() {
             [e.target.name]: e.target.value
         });
     };
-   
-    console.log(import.meta.env.VITE_API_URL);
+
+    // console.log(import.meta.env.VITE_API_URL);
+    console.log('API_URL:', API_URL);
     return (
         <div className="admin-panel">
-           
+
             <div className="container-fluid">
                 <h2 className="admin-title">Admin Panel</h2>
 
@@ -138,10 +141,10 @@ function AdminPanel() {
                     </button>
                 </div>
                 {
-                msg && <div class="alert alert-success w-50 offset-3" role="alert">
-                    {msg}
-                </div>
-            }
+                    msg && <div class="alert alert-success w-50 offset-3" role="alert">
+                        {msg}
+                    </div>
+                }
                 <div className="admin-content">
                     <button className="btn btn-success mb-3" onClick={handleAdd}>
                         <i className="fas fa-plus"></i> Add New

@@ -5,23 +5,11 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 
-
-
 // Load environment variables
 dotenv.config();
 
 const app = express();
 
-// Update CORS configuration
-const corsOptions = {
-    origin: [
-        'http://localhost:3000',
-        'https://cricket-frontend-93ct.onrender.com'  // Add your Render frontend URL
-    ],
-    credentials: true
-};
-
-app.use(cors(corsOptions));
 console.log("MongoDB URI:", process.env.MONGODB_URL);
 
 // Middleware
@@ -33,8 +21,8 @@ mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-.then(() => console.log('MongoDB Connected'))
-.catch(err => console.log(err));
+    .then(() => console.log('MongoDB Connected'))
+    .catch(err => console.log(err));
 
 // User Schema
 const userSchema = new mongoose.Schema({
@@ -92,8 +80,10 @@ const Match = mongoose.model('Match', matchSchema);
 
 // Middleware to verify token
 const verifyToken = (req, res, next) => {
+    //  console.log("Verifying Token: ",process.env.JWT_SECRET);
     const token = req.headers['authorization'];
     if (!token) return res.status(403).json({ message: 'No token provided' });
+
 
     jwt.verify(token.split(' ')[1], process.env.JWT_SECRET, (err, decoded) => {
         if (err) return res.status(401).json({ message: 'Unauthorized' });
@@ -154,7 +144,7 @@ app.post('/api/auth/login', async (req, res) => {
 
         const token = jwt.sign(
             { id: user._id, isAdmin: user.isAdmin },
-            'your_jwt_secret',
+            process.env.JWT_SECRET,
             { expiresIn: '24h' }
         );
 
@@ -223,7 +213,7 @@ app.delete('/api/players/:id', verifyToken, verifyAdmin, async (req, res) => {
 // Get all teams
 app.get('/api/teams', async (req, res) => {
     try {
-        
+
         const teams = await Team.find().sort({ ranking: 1 });
         res.json(teams);
     } catch (error) {
