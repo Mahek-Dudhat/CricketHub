@@ -8,8 +8,6 @@ c:\Users\mahek\OneDrive\Pictures\Screenshots\Screenshot 2025-10-11 143905.png
 
 Cricket Info Website is a modern, responsive web application built as part of an internship project. It provides cricket enthusiasts with real-time match updates, team rankings, and detailed player statistics. The platform includes a powerful admin panel for content management with full CRUD (Create, Read, Update, Delete) operations.
 
-**Live Demo:** [Your Deployed URL Here]
-
 ## ✨ Features
 
 ### For Users
